@@ -1,0 +1,49 @@
+html{
+    background-color: white;
+    margin-left: 21%;
+}
+h1,h2{
+    color: black;
+    text-align: center;
+}
+.menu{
+    position: fixed;
+    background-color: #444444;
+    overflow: auto;
+    width: 21%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+.menu h2{
+   color: white;
+    
+}
+
+.olMenu{
+    display: block;
+    
+}
+.olMenu li{
+   color: white;
+    line-height: 32px;
+    
+}
+.olMenu a{
+    display: block;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    
+}
+.olhr li{
+    color: black;
+    font-size: 17px;
+    line-height: 1.5;
+    font-weight: italic;
+}
+ul li{
+    color:  gray;
+    font-size: 13px;
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    
+    <header>
+        <title>OV Oracle SQL</title>   
+        <link rel="stylesheet" type="text/css" href="sql.css">
+        <h1>Oracle SQL Tutorial  <br /> </h1>
+        <nav  class="menu">
+            <h2>Menu</h2>
+            <ol class="olMenu">
+                <li><a href="#">Introduction</a></li>
+                <li><a href="#">Déblocage du conte HR</a></li>
+                <li><a href="#">Connection et exemple d'utilisation</a></li>
+                <li><a href="#">Les bases d'oracle SQL</a></li>
+                <li><a href="#">Les fonctions</a></li>
+                    <ol>
+                        <li><a href="#">Les fonctions de Chaine</a></li>
+                        <li><a href="#">Les fonctions de Date</a></li>
+                        <li><a href="#">Les fonction Numerique</a></li>
+                    </ol>
+                <li><a href="#">Exercices et solutions</a></li>
+            </ol>
+        </nav>
+    </header>   
+    <body>
+        
+        
+        
+        <dl>
+            <dt><h3>1. Introduction</h3></dt>
+            <dd>SQL (Structured Query Language), est un langage destiné à la gestion des bases de données relationnelles. Dans ces tutoriels, nous allons utiliser Oracle comme Système de Gestion de Base de Données (SGBD) dévéloppé par Oracle Corporation. Pour commencer, il faut savoir qu’Oracle comporte plusieurs types d’objets. Les plus utilisés sont les <b>Tables, les Vues, les Triggers (ou Déclencheurs) </b>, les Fonctions, les Procédures et les Packages. Bien sûr il existe d’autres composants dont on va parler dans un autre tutorial.
+                
+                <dl>
+                    <dt><u>Oracle corporation</u></dt>
+                    <dd>Societé américaine située en Californie, développe et commercialise un SGBD et un ensemble de produits de développement. Oracle a des filiales dans un grand nombre de pays. La filiale française (Oacle France) a été créée en 1986, elle est composée de cinq départements (marketing, comlmercial,avant-vente,conseil et formation).</dd>
+                </dl>
+            </dd>
+        </dl>
+        
+        <dl>
+            <dt><h3>2. Déblocage du conte HR</h3></dt>
+            <dd>Apres intallation d'oracle express 11g, il existe un conte utilisateur HR déja mis en place par la communauté oracle , ce conte permet aux apprenants de gagner du temps dans leurs apprentissages car on y trouve des tableaux déja rempli sur lesquels noux pouvons exécuter de requètes SQL. Mais par défaut, ce conte est bloquer, ce qui nous donne accès aux tableaux.<br />
+                Dans cette partie, nous allons débloquer le conte HR et lui donner un mots de pass unique nous permettant d'y accedé. Il existe plusieurs methodes pour débloquer le conte HR, dans notre cas, nous allons le débloquer et changer le mot de pass en une seule ligne dans <strong>l'invité de commande SQL</strong>.<br />
+                Executer les commandes suivantes:<br />
+                
+                <ol class="olhr">
+                    <li>Connecter vous dabord a votre conte system:<br />
+                        <code>connect system/[mot_de_pass]</code><br />
+                        <i>[mot_de_pass] est le mot de pass fourni lors de l'instalation d'oracle 11g (selon votre version).</i>
+                    
+                    </li>
+                    <li>Debloquer maintenant le conte HR<br />
+                        <em><code>alter user hr account unlock identified by [mot de pass]</code></em><br />
+                        <i>[mot_de_pass] est le mot de pass que vous allez utiliser pour vous connecter au conte HR (à ne pas oublié).</i><br />
+                        Vous pouvez vérifié en executant:  <ode>select * from employees</ode>
+                    </li>
+                
+                </ol>
+                
+                
+                
+                
+            </dd>
+        </dl>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <h2><u>Exercices et solutions</u></h2> 
+        
+        <ol>
+            <li> Ecrivez une requête en SQL pour afficher le nom complet (prénom et nom) et le salaire
+                des employés dont le salaire est inférieur à 6000 <br />
+                <ul type="square"><li><b><code>select first_name || ' ' || last_name,salary from employees where salary &#60; 6000 </code></b></li></ul></li>
+            <li>Ecrivez une requête en SQL pour afficher le prénom et le nom, le numéro de
+                département et le salaire des employés dont le salaire est supérieur à 8 000 <br />
+                <ul type="square"><li><b><code>select first_name, last_name,department_id,salary from employees where salary > 8000;</code></b></li></ul></li>
+            <li> Ecrivez une requête en SQL pour afficher le nom, le prénom et le numéro de
+                département de tous les employés dont le nom est "McEwen"<br />
+               <ul type="square"><li> <b><code>select first_name, last_name,department_id,salary from employees where last_name = 'McEwen';</code></b></li></ul></li>
+            
+            <li> Ecrivez une requête en SQL pour afficher toutes les informations sur le département Marketing<br />
+                <ul type="square"><li><b><code>select * from departments where department_name='Marketing';</code></b></li></ul></li>
+            
+            <li> Ecrivez une requête en SQL pour afficher le nom complet (prénom et nom), la date
+                d'embauche, le salaire et le numéro de département des employés dont<br/> le prénom ne
+                contient pas la lettre M, puis définissez le résultat par ordre croissant de numéro de
+                département.<br />
+                <ul type="square"><li><b><code>select first_name, last_name,hire_date,department_id,salary from employees where first_name not like '%M%' order by department_id;</code></b></li></ul></li>
+            
+            <li> Ecrivez une requête en SQL pour afficher toutes les informations des employés dont le
+                salaire est compris entre 8 000 et 12 000 et dont la <br/>commission n’est pas nulle ou le
+                numéro de département est différent des numéros 40, 120 et 70 et qui ont été
+                embauchés avant le 5 juin. 1987.<br />
+                <ul type="square"><li><b><code>select * from employees where (salary between 8000 and 12000 and commission_pct is not null ) or (department_id not in (40,120,70) and hire_date &#60; '6/15/1987');</code></b></li></ul></li>
+            
+            <li> Ecrivez une requête en SQL pour afficher le nom complet (prénom et nom) et le salaire
+                de tous les employés qui ne gagnent aucune commission.<br />
+                <ul type="square"><li><b><code>select first_name,last_name,salary from employees where  commission_pct is not null ;</code></b></li></ul></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li> Ecrivez une requête en SQL pour afficher toutes les informations des employés dont le
+                salaire est compris entre 8 000 et 12 000 et dont la <br/>commission n’est pas nulle ou le
+                numéro de département est différent des numéros 40, 120 et 70 et qui ont été
+                embauchés avant le 5 juin. 1987.<br />
+                <ul type="square"><li><b><code>select * from employees where (salary between 8000 and 12000 and commission_pct is not null ) or (department_id not in (40,120,70) and hire_date &#60; '6/15/1987');</code></b></li></ul></li>
+            
+            <li> Ecrivez une requête en SQL pour afficher le nom complet (prénom et nom) et le salaire
+                de tous les employés qui ne gagnent aucune commission.<br />
+                <ul type="square"><li><b><code>select first_name,last_name,salary from employees where  commission_pct is not null ;</code></b></li></ul></li>
+            
+            
+            <li> Ecrivez une requête en SQL pour afficher toutes les informations des employés dont le
+                salaire est compris entre 8 000 et 12 000 et dont la <br/>commission n’est pas nulle ou le
+                numéro de département est différent des numéros 40, 120 et 70 et qui ont été
+                embauchés avant le 5 juin. 1987.<br />
+                <ul type="square"><li><b><code>select * from employees where (salary between 8000 and 12000 and commission_pct is not null ) or (department_id not in (40,120,70) and hire_date &#60; '6/15/1987');</code></b></li></ul></li>
+            
+            <li> Ecrivez une requête en SQL pour afficher le nom complet (prénom et nom) et le salaire
+                de tous les employés qui ne gagnent aucune commission.<br />
+                <ul type="square"><li><b><code>select first_name,last_name,salary from employees where  commission_pct is not null ;</code></b></li></ul></li>
+            
+            
+            <li> Ecrivez une requête en SQL pour afficher toutes les informations des employés dont le
+                salaire est compris entre 8 000 et 12 000 et dont la <br/>commission n’est pas nulle ou le
+                numéro de département est différent des numéros 40, 120 et 70 et qui ont été
+                embauchés avant le 5 juin. 1987.<br />
+                <ul type="square"><li><b><code>select * from employees where (salary between 8000 and 12000 and commission_pct is not null ) or (department_id not in (40,120,70) and hire_date &#60; '6/15/1987');</code></b></li></ul></li>
+            
+            <li> Ecrivez une requête en SQL pour afficher le nom complet (prénom et nom) et le salaire
+                de tous les employés qui ne gagnent aucune commission.<br />
+                <ul type="square"><li><b><code>select first_name,last_name,salary from employees where  commission_pct is not null ;</code></b></li></ul></li>
+            
+        </ol>
+        
+    </body>
+    <foot>
+        
+    </foot>
+</html>
