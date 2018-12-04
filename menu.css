@@ -7,12 +7,12 @@ html{
 }
 #logo{
     float: left;
-    top: 5px;
+    
 }
 #menu{
     float: right;
     border-bottom: 2px solid gray; 
-    clear: right;
+    top: 55px;
 }
 #menu ul{
     list-style-type: none;
