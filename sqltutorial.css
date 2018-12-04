@@ -1,0 +1,47 @@
+ .w3-sidebar li{
+                
+            }
+ .w3-sidebar{
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                bottom: 0px;
+                display: block;
+                overflow: auto;
+            }
+.w3-sidebar h2{
+                text-align: center;
+            }
+.w3-sidebar a{
+    text-decoration: none;
+    transition-property: all;
+    transition-duration: 1s;
+}
+.w3-sidebar li{
+     transition-property: all;
+    transition-duration: 0.5s;
+}
+ol li::first-line{
+    color: blueviolet;
+    font-weight: bold;
+}
+.w3-sidebar a:hover{
+    color: white;
+}
+.w3-sidebar li:hover{
+    background-color: orange;
+}
+code{
+    background-color: darkslategrey;
+    color: white;
+    font-style: italic;
+}
+.w3-container u{
+    color: blue;
+    font-size: 1.5;
+    font-weight: bold;
+}
+em{
+    background-color: orange;
+    color: white;
+}
