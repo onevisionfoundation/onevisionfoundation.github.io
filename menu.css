@@ -7,7 +7,7 @@ html{
 }
 #logo{
     float: left;
-    top: 1%;
+    top: 5px;
 }
 #menu{
     float: right;
