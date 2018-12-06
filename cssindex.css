@@ -1,0 +1,119 @@
+html{
+    background-image: url(back2.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+     padding-left: 0px;
+    background-color: darkslategray
+   
+}
+
+#entete{
+    margin-top: -1em;
+    margin-left: -0.0em;
+    margin-right: -0.0em;
+    background-color: rgba(0,0,0,0.7);
+}
+#homenav{
+    position: absolute;
+    right: 0.0em;
+    top: 1.2em;
+    
+}
+#homenav a:active{
+    background-color: red;
+}
+#lesslogan{
+    padding-top: 6em;
+    padding-left: 2em;
+}
+.slog{
+    color: yellow;
+    font-family: verdana, cursive, sans-serif;
+    font-size: 3em;
+    word-wrap: normal;
+    
+    animation-name: zoum;
+    animation-duration: 1s;
+}
+
+.slog2{
+    margin-top: 1.2em;
+    color: lawngreen;
+    font-size: 18px;
+    font-family: verdana, cursive, sans-serif;
+    width: 50%;
+    
+}
+
+#apredreplus{
+    margin-top: 6em;
+    margin-left: 2em;
+    
+}
+#apredreplus p{
+   color: orange;
+    
+}
+@keyframes zoum{
+    from{
+       font-size: 0.3em;
+    }
+    to{
+       
+    }
+}
+#lanli{
+    list-style-type: none;
+    display: block;
+    margin-top: 0px;
+    background-color: orange;
+    padding: 3px;
+    width: 18%;
+    height: 25%;
+    transition-property: all;
+    transition-duration: 0.3s;
+    
+}
+#lancervous{
+   font-size: 38px;
+    text-decoration: none;
+    color: white;
+    
+}
+
+#lanli:hover{
+    transform: scale(1.05);
+}
+#lanli:active{
+    background-color: orangered;
+    transform: scale(0.5);
+}
+.imgreso{
+    width: 10%;
+    height: 10%;
+}
+#resodiv{
+    position: absolute;
+    right: 2%;
+}
+#resodiv ul{
+    list-style-type: none;
+}
+#resodiv li{
+    margin-top: 5px;
+    transition-property: all;
+    transition-duration: 0.3s;
+}
+#resodiv li:hover{
+    transform: scale(1.2);
+}
+#resodiv li:active{
+    transform: scale(0.5);
+}
+
+
+
+
+
+
+

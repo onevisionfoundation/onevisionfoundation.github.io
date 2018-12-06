@@ -1,0 +1,26 @@
+.img{
+    float: left;
+    width: 28%;
+    height: 28%;
+    margin-bottom:  -5px;
+}
+figcaption{
+    position: relative;
+    font-size: 12px;
+    top: -0.1em;
+}
+@media all and (max-width: 600px) {
+    
+    .img{
+        transform: scale(0.3);
+        margin-left: 0px;
+    }
+}
+figure a{
+    color: teal;
+    transition-property: all;
+    transition-duration: 0.3s;
+}
+figure a:active{
+    background-color: red;
+}

@@ -1,188 +1,45 @@
 <!DOCTYPE html>
 <html>
     
-    <header>
+    <head>
         <meta charset="utf-8">
-        <title>One Vision</title>  
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>One Vision E-Learning</title>
+        <meta name="description" content="one vision tutorial.">
+        <link rel="stylesheet" href="cssindex.css">
         <link rel="stylesheet" href="w3.css">
-        <link rel="stylesheet" type="text/css" href="menu.css">
-      <link rel="shortcut icon" href="log.png" type="image/x-icon" />
-        
-           
-    </header> 
-    <!--    Body    -->
-    <body class="w3-card-4">
-        <div id="bentete" class="w3-container">
-        <img id="logo" src="log.png">
-    
-        <nav id="menu">
-            <ul class="menu">
-                <li><a href="#">Acceuille</a></li>
-                <li><a href="#">Cours</a></li>
-                <li><a href="#">Evenement</a></li>
-                <li><a href="#">Galerie</a></li>
-                <li><a href="#">A propos</a></li>
-                <li><a href="#">S'inscrire</a></li>
+    </head>
+ <!-- **************************** Debut de body ****************************************-->
+    <body>
+        <div class="w3-contain w3-black" id="entete">
+         <img src="log.png" alt="">
+            <ul class="w3-navbar w3-black" id="homenav">
+              <li><a href="#" style="color: yellow; background-color: red;">Home</a></li>
+              <li><a href="#">Cours</a></li>
+              <li><a href="#">contact</a></li>
+              <li><a href="#">A propos</a></li>
+              <li><a href="#">Blog</a></li>
             </ul>
-        </nav>
-        
-        
-                <br> <br>
-
         </div>
-        
-        <div class="w3-container">
-        <div id="citation">
-            <h1>Nous voullons une meilleure éducation<br />pour un monde meilleur</h1>
-            
-            <p><cite class="w3-serif">&#10077; L'éducation est plus qu'un métié,c'est une mission,qui consiste à aider chaque personne à reconnaitre<br> ce qu'elle a d'irremplaçable et d'unique, afin qu'elle grandisse et s'épanouisse &#10078;<br /> </cite></p>
-        </div>
-        <a href="#" id="lancer" class="w3-panel">LANCEZ VOUS</a>
-        <p id="tcours">LES TOP COURS</p>
-        
-            <ul id="TOPCOURS">
-                <li  id="ora"><a href="sqltutorial.html">OracleSQL</a></li>
-                <li><a href="#">JAVA</a></li>
-                <li><a href="#">Réseau</a></li>
-                <li><a href="#">JavaScript</a></li>
-                <li><a href="#">System</a></li>
-                <li><a href="#">Analyse</a></li>
-            </ul>
-        
-        <br><br><br><br><br><br> <br><br><br><br><br><br><br>
-        <header class="w3-bar w3-blue" style="position: absolute;left: 0px;right: 0px;">
-              <h1 id="deb"><strong>Nos Productions java:</strong> </h1>
-            
-             
-        <div id="slideShowCont">
-        
-            <div class="mySlideFade">
-                <figure>
-                    <img src="ph0.PNG" style="width: 100%">
-                    <figcaption>Pharma Gestion: Une connection sécurisé a l'application</figcaption>
-                </figure>
-            </div>
-            
-            <div class="mySlideFade">
-                <figure>
-                    <img src="ph1.PNG" style="width: 100%">
-                    <figcaption>Pharma Gestion: Une page d'acceuille où vous pouver conrolé l'état de votre stock</figcaption>
-                </figure>
-            </div>
-            
-            <div class="mySlideFade">
-                <figure>
-                <img src="ph2.PNG" style="width: 100%">
-                    <figcaption>Pharma Gestion: Afficher et personnaliser l'affichage de votre stock en faisant des tris et filtre</figcaption>
-                </figure>
-            </div>
-            
-            <div class="mySlideFade">
-                <figure>
-                    <img src="pg3.PNG" style="width: 100%">
-                    <figcaption>Pharma Gestion: Vender vos produits sans aide d'une calculatrice et sur tout les fiche de stock son gérée automatiquement</figcaption>
-                </figure>
-            </div>
-        
+        <div id="lesslogan">
+            <h1 class="slog">Nous voullons une meilleure éducation <br>pour un monde meilleur</h1>
+            <h3 class="w3-serif w3-card w3-yellow w3-animate-zoom w3-opacity slog2"><i>"L'éducation est plus qu'un métié,c'est une mission,qui consiste à  aider chaque personne à reconnaitre
+            ce qu'elle a d'irremplaçable et d'unique, afin qu'elle grandisse et s'épanouisse" </i></h3>
         
         </div>
-            </header>
-        
-       
-        
-        <script>
-            
-            var slideIndex=0;
-            showSlides();
-            
-            function showSlides(){
-                var i;
-                var slides = document.getElementsByClassName("mySlideFade");
-                for(i=0;i<slides.length;i++){
-                    slides[i].style.display="none";
-                }
-                slideIndex++;
-                if(slideIndex > slides.length){
-                    slideIndex = 1;
-                }
-                slides[slideIndex-1].style.display = "block";
-                setTimeout(showSlides,5000);
-                 
-            }
-             
-            
-        </script>
-            <br><br><br><br><br><br><br><br><br> 
-            <br><br><br><br><br><br><br><br><br><br><br><br><br> 
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            
-            
-            </div>
-        
-        <footer class="w3-container" style="position: relative">
-   <ul id="l1">
-                <li><a href="OracleSQL.html">Licence 1</a></li>
-                <ul>
-                    <li><a href="#">JAVA</a></li>
-                    <li><a href="#">Réseau</a></li>
-                    <li><a href="#">JavaScript</a></li>
-                    <li><a href="#">System</a></li>
-                    <li><a href="#">Analyse</a></li>
-                </ul>
-            </ul>
-        <ul id="l2">
-                <li><a href="OracleSQL.html">Licence 2</a></li>
-                <ul>
-                    <li><a href="#">JAVA</a></li>
-                    <li><a href="#">Réseau</a></li>
-                    <li><a href="#">JavaScript</a></li>
-                    <li><a href="#">System</a></li>
-                    <li><a href="#">Analyse</a></li>
-                </ul>
-            </ul>
-        <ul id="l4">
-                <li><a href="OracleSQL.html">Licence 3</a></li>
-                <ul>
-                    <li><a href="#">JAVA</a></li>
-                    <li><a href="#">Réseau</a></li>
-                    <li><a href="#">JavaScript</a></li>
-                    <li><a href="#">System</a></li>
-                    <li><a href="#">Analyse</a></li>
-                </ul>
-            </ul>
-        <ul id="l4">
-                <li><a href="OracleSQL.html">A propos de nous</a></li>
-                <ul>
-                    <li><a href="#">JAVA</a></li>
-                    <li><a href="#">Réseau</a></li>
-                    <li><a href="#">JavaScript</a></li>
-                    <li><a href="#">System</a></li>
-                    <li><a href="#">Analyse</a></li>
-                </ul>
-            </ul>
-        <ul id="l4">
-                <li><a href="OracleSQL.html">Nos supports</a></li>
-                <ul>
-                    <li><a href="#">JAVA</a></li>
-                    <li><a href="#">Réseau</a></li>
-                    <li><a href="#">JavaScript</a></li>
-                    <li><a href="#">System</a></li>
-                    <li><a href="#">Analyse</a></li>
-                </ul>
+        <div id="resodiv">
+            <ul>
+                <li><a href="#"><img src="facebook.png"></a></li>
+                <li><a href="#"><img src="gmail.png"></a></li>
+                <li><a href="#"><img src="whotapp.png"></a></li>
             </ul>
         
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br><br>
-        <br><br>
-        <br>
-    </footer>
+        </div>
+        <div id="apredreplus">
+                <p><i>Il n'est jamais trop tard d'etudier</i></p>
+                <li id="lanli"><a href="lancezvous.html" id="lancervous">Lancez-vous</a></li>
+                
+        </div>
+        
     </body>
-    <!--    footer    -->
-    
 </html>
