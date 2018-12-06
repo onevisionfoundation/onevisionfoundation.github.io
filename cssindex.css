@@ -14,6 +14,9 @@ html{
     background-color: rgba(0,0,0,0.7);
     
 }
+#divtete{
+    background-color: red;
+}
 #homenav{
     z-index: 1;
     float: right;
@@ -25,7 +28,10 @@ html{
 #homenav a:active{
     background-color: red;
 }
-
+#logo{
+    width: 150px;
+    height: 70px;
+}
 #lesslogan{
     padding-top: 6em;
     padding-left: 2em;
