@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html class="w3-sand">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Administration réseau</title>
+        <meta name="description" content="An interactive getting started guide for Brackets.">
+        <link rel="stylesheet" href="reseau.css">
+         <link rel="stylesheet" href="w3.css">
+        <h1 id="titre">ADMINISTRATION RESEAU WINDOWS SERVEUR</h1>
+    </head>
+    <body>
+        <div id="divMenu" class="w3-teal">
+            <h2>MENU</h2>
+            <ol id="menup">
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#guidinstal">Guide d'installation</a></li>
+                    <ol>
+                        <li><a href="#pre">Prérequis matériels minimum</a></li>
+                        <li><a href="#ins">Installation</a></li>
+                    </ol>
+                <li><a href="#intro">Configuration server</a></li>
+                <li><a href="#intro">Ajout user</a></li>
+            </ol>
+        
+        </div>
+        
+        <div id="contCentre">
+        <h2 id="intro">INTRODUCTION</h2>
+        <p>Windows Server 2016 est disponible dans les éditions <strong>Standard, Datacenter et Essentials</strong>.<br>
+            Windows Server 2016 Datacenter permet aux utilisateurs d’exécuter un nombre illimité d’environnements de système d’exploitation et de conteneurs Hyper-V.<br>
+            L’édition Standard permet d’en faire fonctionner seulement deux.<br>
+            L’édition Datacenter inclut également des fonctionnalités telles que Storage Spaces Direct et Storage Replica, ou encore des machines virtuelles Shielded. Ces fonctionnalités ne font pas partie de l’édition Standard. Windows Server Essentials se destine quant à lui aux petites structures ne dépassant pas les 25 utilisateurs et les 50 appareils. Il a d’ailleurs sa propre documentation.</p><br>
+        <p>Le tableau suivant résume brièvement les principales différences entre les éditions Standard et Datacenter :</p>
+        <table class="w3-table-all">
+            <th border=2px>Fonctionnalité</th>
+            <th>Datacenter</th>
+            <th>Standard</th>
+            
+            <tr>
+                <td>Fonctionnalité Core de Windows Server</td>
+                <td>Oui</td>
+                <td>Oui</td>
+            </tr>
+            <tr>
+                <td>OSEs / conteneurs Hyper-V</td>
+                <td>illimité</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Conteneurs Windows Server</td>
+                <td>illimité</td>
+                <td>illimité</td>
+            </tr>
+            <tr>
+                <td>Service Host Guardian</td>
+                <td>Oui</td>
+                <td>Oui</td>
+            </tr>
+            <tr>
+                <td>Option d’installation Nano serveur</td>
+                <td>Oui</td>
+                <td>Oui</td>
+            </tr>
+            <tr>
+                <td>Fonctionnalités de stockage, y compris les espaces de stockage direct et stockage Replica</td>
+                <td>Oui</td>
+                <td>Non</td>
+            </tr>
+            <tr>
+                <td>Machines virtuelles Blindé (Shielded)</td>
+                <td>Oui</td>
+                <td>non</td>
+            </tr>
+            <tr>
+                <td>Software Defined Networking Infrastructure (Network Controller, Software Load Balancer, and Multi-tenant Gateway)</td>
+                <td>Oui</td>
+                <td>non</td>
+            </tr>
+        
+        </table>
+        
+        <h2 id="guidinstal">2. GUIDE D'INSTALLATION</h2>
+        <p>Les deux éditions Standard et Datacenter offrent trois options d’installation:</p>
+        <ul>
+            <li><strong>Serveur Core:</strong><br> réduit l’espace nécessaire sur le disque, la surface d’attaque potentielle, et en particulier les ressources système nécéssaires (on le vois d’ailleurs dans les prérequis d’installation). Néanmoins, vous retrouver exactement les même fonctionnalités que sur les autres options d’installation.</li>
+        
+            <li><strong>Serveur avec Expérience utilisateur :</strong><br> installe l’interface utilisateur standard et tous les outils de gestion. Il est alors possible d’installer des rôles et fonctionnalités du serveur via le Gestionnaire de serveur ou par d’autres méthodes (notamment Powershell).</li>
+            <li><strong>Nano Serveur: </strong><br>c'est un système d’exploitation administrable à distance et optimisé pour les clouds privés et datacenter. Il est similaire à Windows Server en mode Server Core, mais avec encore moins de fonctionnalité, il n’y a par exemple, pas la possibilité d’ouverture de session locale, et prend pas en charge seulement les applications, outils ou agents 64 bits. Il prend beaucoup moins d’ espace disque, permet une mise en place beaucoup plus rapide, et nécessite beaucoup moins de mises à jour et redémarrage que les autres options.</li>
+        
+        </ul>
+        <h3 id="pre">a. Prérequis matériels minimum</h3>
+        <p>Les prérequis matériels suivant sont applicables pour toutes les options d’installations (Server Core, serveur avec interface graphique, et Nano Server) et les deux éditions Standard et Datacenter. Cependant, il faut bien entendu prendre en compte, le où les rôles que vous installerez sur le serveur.</p>
+        <ul type="circle">
+            <li><strong>Processeur:</strong> <br>
+            •Processeur 1.4 GHz 64-bit<br>
+            •Compatible 64 bits<br>
+            •Supports NX et DEP<br>
+            •Supports CMPXCHG16b, LAHF/SAHF, et PrefetchW<br>
+            •Supports Second Level Address Translation (EPT ou NPT)<br></li>
+            <li><strong>Mémoire vive: </strong><br>
+                •512 Mo (2 Go pour un serveur avec l’option « Desktop Experience »)<br>
+                •De type ECC (Error Correcting Code) ou une technologie similaire<br>
+            </li>
+        
+        
+        
+            <li><strong>Espace disque:</strong><br>
+                •32Go minium</li>
+        
+        
+            <li><strong>Réseau :</strong><br>
+                •Carte Ethernet Gigabit ou supérieur.
+                •Conforme aux spécifications de l’architecture PCI Express<br>
+                •Prise en charge Pre-boot Execution Environment (PXE).</li>
+        
+        </ul>
+        <h3 id="ins">b. Installation</h3>
+            <ol>
+                <li>Une fois que vous avez télécharger Windows Server 2016, vous pouvez lancer l’installation. <br>Si vous êtes sur une machine physique, vous pouvez graver l’image ISO sur un DVD ou bien créer une clé USB Bootable avec Rufus par exemple et commencer l'installation comme vous le faitent avec nimporte quel system d'exploitation.<br> Si vous êtes sur une machine virtuelle, c’est encore plus simple, vous avez juste à monter l’ISO.<br>
+                Le premier écran concerne le choix de la langue, si vous travailler dans une entreprise international, optez pour l’anglais ce sera beaucoup plus simple pour tout le monde.<br>
+                    <img src="wsInstallation1.jpg"><br>
+                    Vous pouvez maintenant passer à l’installation en cliquant simplement sur  "Installer maintenant".<br>
+                Noter également qu’en cliquant sur « Réparer l’ordinateur » vous aurez la possibilité d’utiliser les utilitaires de dépannage.<br><br>
+                <img src="wsInstallation2.jpg">
+                </li>
+                
+                <li>En fonction de la version de Windows Server 2016 que vous utiliserez, vous aurez accès à plusieurs version, on en a parlé un peu plus haut dans le détails. Selectionnez ici la version que vous souhaitez (avec ou sans interface graphique), puis cliquez sur "Suivant" .
+                    <img src="wsInstallation3.jpg">
+                    <br><br></li>
+                
+                <li>Acceptez les termes du contrat de licence après en avoir pris connaissance (oui, oui, bien sûr !!), puis cliquez sur "Suivant" .
+                    <img src="wsInstallation4.jpg">
+                    <br><br></li>
+                
+                <li>Selectionner le type d’installation : Mise à niveau / Upgrade ou Installation from scratch. Dans le cas présent, nous ferons une installation sur un disque vierge du coup, nous sélectionnerons « Personnalisé : installer uniquement Windows« .
+               <img src="wsInstallation5.jpg"> </li>
+                
+                <li>Sélectionner le lecteur où vous souhaitez effectuer l’installation. Si besoin vous pouvez créer une ou des partitions directement depuis cette interface. Cliquez sur « Suivant » pour lancer l’installation.<br>
+                    <img src="wsInstallation6.jpg">
+                </li>
+                
+                <li>L’installation prendra quelques minutes, en fonction de la puissance de votre serveur.
+                    <img src="wsInstallation7.jpg"><br><br></li>
+                
+                <li>La première chose une fois le serveur installé sera de définir un mot de passe pour le compte Administrateur local.<br>
+                <img src="wsInstallation8.jpg">
+                </li>
+                
+                <li>Vous êtes maintenant prêt à utiliser votre Windows Server 2016. Procéder au déverrouillage de la session en appuyant sur Ctrl + Alt + Suppr, puis entrer le mot de passe Administrateur défini un peu plus tôt.<br>
+                    <img src="wsInstallation9.jpg">
+                    </li>
+                
+                <li>Vous avez maintenant au tableau de bord du serveur, ce qui permettra d’installer des rôles et fonctionnalités, mais qui va également nous permettre de préparer notre serveur. Changer le nom du serveur, configurer l’adresse ip, autoriser l’accès à distance, ect…  Mais tout ça, nous le verrons dans le prochain article.<br>
+                    <img src="wsInstallation10.jpg"><br>
+                Vous savez maintenant installer Windows Server 2016.<br>
+                
+            </ol>
+        </div>
+    </body>
+    <footer>
+    
+    
+    </footer>
+</html>

@@ -1,0 +1,37 @@
+
+#titre{
+    text-align: right;
+    color: orange;
+}
+h1,h2,h3,strong{
+    color: orange;
+}
+h2{
+    text-decoration: underline;
+}
+p,li,th,td{
+    color: black;
+}
+#divMenu{
+    float: left;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    width: 17%;
+    height: 100%;
+    overflow: auto;
+    background-color: #004d40;
+}
+#divMenu h2{
+    text-align: center;
+}
+#divMenu a{
+    text-decoration: none;
+    color: white;
+}
+#menup li{
+    color: white;
+}
+#contCentre{
+    margin-left: 19%;
+}
