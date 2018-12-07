@@ -2,8 +2,9 @@ html{
     background-image: url(back2.jpg);
     background-position: top;
     background-repeat: no-repeat;
-     padding-left: 0px;
-    background-color: darkslategray
+    padding-left: 0px;
+    background-color: darkslategray;
+    height: 100px;
    
 }
 
@@ -19,6 +20,7 @@ html{
     float: right;
     right: 0.0em;
     margin-top: 0.9em;
+    margin-bottom: 0.9em;
     
     
 }
@@ -37,8 +39,8 @@ html{
     color: yellow;
     font-family: verdana, cursive, sans-serif;
     font-size: 3em;
+    width: 70%;
     word-wrap: normal;
-    
     animation-name: zoum;
     animation-duration: 1s;
 }
@@ -117,15 +119,44 @@ html{
 #resodiv li:active{
     transform: scale(0.5);
 }
+
 @media all and (max-width: 600px) {
+ html{
+    background-color: darkslategray;
+   
+}
+.slog{
+    color: yellow;
+    margin-top: 0em;
+    font-family: verdana, cursive, sans-serif;
+    font-size: 1.8em;
+    word-wrap: normal;
+    
+    animation-name: zoum;
+    animation-duration: 1s;
+}
+#homenav{
+    position: absolute;
+    
+}
+    
 #lanli{
-    width: 24%;
+    width: 30%;
     height: 25%;
     
 }
 #lancervous{
     font-size: 18px;
     
+}
+ #apredreplus{
+    margin-top: 3em;
+    
+}
+ #resodiv{
+    position: absolute;
+    right: 2%;
+     bottom: 8%;
 }
 }
 

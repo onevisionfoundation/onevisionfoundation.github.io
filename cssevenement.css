@@ -1,0 +1,16 @@
+#logoteam{
+    float: left;
+}
+#bienv{
+    margin-top: 1.3em;
+}
+#olun li::first-line{
+    color: blue;
+    font-size: 18px;
+    font-weight: bold;
+}
+#sous li::first-line{
+    color: blue;
+    font-size: 14px;
+    font-weight: bold;
+}
