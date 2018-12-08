@@ -120,7 +120,7 @@ html{
     transform: scale(0.5);
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 800px) {
   html{
       background-image: url();
       background-position: top;
