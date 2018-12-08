@@ -120,7 +120,7 @@ html{
     transform: scale(0.5);
 }
 
-@media all and (max-width: 800px) {
+@media screen and (max-width: 768px) {
   html{
       background-image: url();
       background-position: top;
@@ -163,4 +163,28 @@ html{
     right: 2%;
      bottom: 8%;
 }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  html{
+      background-image: url();
+
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  html{
+      background-image: url();
+
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  html{
+      background-image: url();
+
+  }
 }
