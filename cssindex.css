@@ -5,7 +5,7 @@ html{
     padding-left: 0px;
     background-color: darkslategray;
     height: 100px;
-   
+
 }
 
 #entete{
@@ -13,7 +13,7 @@ html{
     margin-left: -0.0em;
     margin-right: -0.0em;
     background-color: rgba(0,0,0,0.7);
-    
+
 }
 #homenav{
     z-index: 1;
@@ -21,8 +21,8 @@ html{
     right: 0.0em;
     margin-top: 0.9em;
     margin-bottom: 0.9em;
-    
-    
+
+
 }
 #homenav a:active{
     background-color: red;
@@ -47,28 +47,28 @@ html{
 
 .slog2{
     margin-top: 1.2em;
-    color: lawngreen;
+    color: white;
     font-size: 18px;
     font-family: verdana, cursive, sans-serif;
     width: 50%;
-    
+
 }
 
 #apredreplus{
     margin-top: 6em;
     margin-left: 2em;
-    
+
 }
 #apredreplus p{
    color: orange;
-    
+
 }
 @keyframes zoum{
     from{
        font-size: 0.3em;
     }
     to{
-       
+
     }
 }
 #lanli{
@@ -81,13 +81,13 @@ html{
     height: 25%;
     transition-property: all;
     transition-duration: 0.3s;
-    
+
 }
 #lancervous{
     font-size: 38px;
     text-decoration: none;
     color: white;
-    
+
 }
 
 #lanli:hover{
@@ -121,37 +121,42 @@ html{
 }
 
 @media all and (max-width: 600px) {
- html{
-    background-color: darkslategray;
-   
-}
+  html{
+      background-image: url();
+      background-position: top;
+      background-repeat: no-repeat;
+      padding-left: 0px;
+      background-color: darkslategray;
+      height: 100px;
+
+  }
 .slog{
     color: yellow;
     margin-top: 0em;
     font-family: verdana, cursive, sans-serif;
     font-size: 1.8em;
     word-wrap: normal;
-    
+
     animation-name: zoum;
     animation-duration: 1s;
 }
 #homenav{
     position: absolute;
-    
+
 }
-    
+
 #lanli{
     width: 30%;
     height: 25%;
-    
+
 }
 #lancervous{
     font-size: 18px;
-    
+
 }
  #apredreplus{
     margin-top: 3em;
-    
+
 }
  #resodiv{
     position: absolute;
@@ -159,9 +164,3 @@ html{
      bottom: 8%;
 }
 }
-
-
-
-
-
-
