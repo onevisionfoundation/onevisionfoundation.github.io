@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JAVA swing</title>
+    <link rel="stylesheet" href="javaswing.css">
+    <link rel="stylesheet" href="w3.css">
+    <h1>Notes sur Swing</h1>
+  </head>
+  <body class="w3-sand">
+      <ol>
+        <li>
+          <dl class="">
+            <dt>Introduction</dt>
+            <dd>Swing regroupe un ensemble de classes permettant la construction d'environnements graphiques évolués
+.
+Les composants proposés sont indépendants de la machine sur laquelle ils s'exécutent (contrairement
+à AWT) : la performance est moindre, mais l'indépendance plus forte.
+Swing s'appuie sur un certain nombre de classes non graphiques de AWT (pour la gestion des évènements, par exemple),
+reprend les fonctionnalités de AWT, redénit les composants d'interface complètement en Java, inclut des composants d'interface plus riches (listes, panneau à onglets, etc.). <br>
+ * Points forts : portabilité (pur java), comportement standard sur toutes plate-formes, large palette de
+composants, look and feel congurable (indépendant de la plate-forme). <br>
+ * Points faibles : portabilité des applets (composants Swing moins implémentés dans les navigateurs),
+moins bonne performance</dd>
+          </dl>
+        </li>
+        <li>
+            <dl class="">
+              <dt>La classe JFrame</dt>
+              <dd>Pour construire une interface graphique, on utilisera une fenêtre (JFrame) et on ajoutera des composants graphiques (conteneurs JPanel et contrôles graphiques)
+                à son conteneur principal (on pourra ajouter également une barre de menu dans la zone prévue à cet effet). <br> <br>
+                On pourra utiliser les méthodes suivantes : (de la classe JFrame) : <br>
+                  <ul>
+                    <li>setTitle(une chaîne de caractères) : <br> pour définir le titre de la fenêtre</li>
+                    <li>etDefaultCloseOperation(JFrame.EXIT_ON_CLOSE): <br>pour définir l'action sur la fermeture de
+                        la fenêtre, ici quitter (exit)</li>
+                    <li>setSize(largeur, hauteur) : <br> pour définir la taille de la fenêtre (pas de gestionnaire de positionnement)</li>
+                    <li>setVisible(booléen) : <br> pour rendre visible/invisible</li>
+                    <li>getContentPane() : <br>envoie une référence vers le conteneur principal associé à la fenêtre ; c'est un
+                    objet de classe Container</li>
+                    <li>add() : <br>ajoute un objet graphique au conteneur</li>
+                  </ul>
+                  Par exemple, pour récupérer une référence au conteneur principal : <br>
+                  <code>Container c = getContentPane ();</code> <br>
+
+                  Une fois, ces diérents composants créés, il faut indiquer la façon dont ils sont disposés à l'écran. La
+seule chose que nous aurons besoin de savoir est que l'objet JPanel " contiendra tous les autres objets
+graphiques. <br>Nous pouvons récupérer le conteneur" de la fenêtre, c'est-à-dire la zone graphique associée
+à la fenêtre dans laquelle nous ajouterons nos diérents composants graphiques. Cet objet qui nous servira
+de "conteneur"est un objet de la classe Jpanel. <br>
+La méthode setContentPane de la classe JFrame associe le  "conteneur" (la méthode add(\,) réalise la
+même opération) à la fenêtre. <br>La syntaxe est la suivante : <br>
+              <code>monJFrame . setContentPane ( monJPanel );</code> <br>
+              Ensuite, il sufit simplement d'ajouter des objets (JTextField, JButton, JLabel .....) au "conteneur" grâce à la méthode add de la classe
+JPanel.
+              </dd>
+            </dl>
+        </li>
+
+        <li>
+            <dl class="">
+              <dt>Utiliser un positionnement dynamique des composants</dt>
+              <dd>Comme vous pouvez le constater, les composants graphiques se rajoutent les uns à la suite des autres
+et même si c'est susant pour certaines applications basiques, c'est insusant pour construire de vraies
+applications.<br>
+Heureusement pour nous, la disposition des objets graphiques dans un JPanel est réalisée par une
+classe particulière d'objets appelé gestionnaire de positionnement (layout Managers). Ces gestionnaires
+de positionnement ont une sémantique calquée sur celle qui lie un JPanel à une fenêtre JFrame, il faut
+associer un gestionnaire de positionnement à un JPanel.<br>
+Nous n'avons heureusement pas à écrire un gestionnaire de positionnement (même si cela est possible)
+car la bibliothèque Java fournit déjà un certain nombre de gestionnaires de positionnement qui correspondent aux situations les plus courantes. Voir par exemple la documentation de Java à cette adresse
+http://docs.oracle.com/javase/tutorial/uiswing/layout/using.html.<br>
+Sans gestionnaire (pas de layout manager, valeur 'null', déconseillé), le placement des composants est
+manuel (c'est ce qui a été utilisé dans l'exercice précédent) : <br>
+                      <ul>
+                        <li>pas de redimensionnement automatique des composants lors d'un redimensionnement de la fenêtre</li>
+                        <li>gestion de la taille manuelle</li>
+                        <li>complexité du placement (coordonnées x,y)</li>
+                        <li>complexité de la modication de l'interface : si un composant est décalé, d'autres doivent l'êtreégalement</li>
+                      </ul>
+
+                    <h3> Les gestionnaires de positionnement</h3>
+                      Les gestionnaires de positionnement automatisent le placement dynamique des composants dans un
+                      conteneur selon des règles préétablies. Les gestionnaires courants sont les suivantes : <br>
+                        - FlowLayout : (par défaut pour JPanel) : les composants sont placés les uns après les autres, avec
+                      un passage à la ligne suivante quand une ligne est pleine <br>
+                       - BorderLayout : (par défaut pour JFrame) : dénit 5 zones, avec un composant par zone :
+                      1 zone haute (BorderLayout.NORTH) et 1 zone basse (BorderLayout.SOUTH) <br>
+                      - au milieu 3 zones : gauche (BorderLayout.WEST), centre (BorderLayout.CENTER, option par
+                      défaut) et droite (BorderLayout.EAST) <br>
+                       - BoxLayout : les composants sont placés les uns au dessous des autres, ou les uns après les autres <br>
+                        - GridLayout : les composants sont placés dans une grille <br>
+                       - CardLayout et GridBagLayout sont plus complexes à manipuler <br>
+                      Pour associer un gestionnaire de placement à un conteneur, on utilise la méthode setLayout(objet
+                      gestionnaire). <br>
+                      Par exemple: <br>
+                      <code>JPanel pnl1 = new JPanel (); <br>
+                        pnl1 . setLayout ( new BorderLayout ());</code> <br>
+                        La conception d'une interface graphique va consister en l'utilisation la plus judicieuse de conteneurs
+                        (comme les JPanel) associés aux gestionnaires de placement les plus adaptés.
+
+
+                        <ul>
+                          <li>xemple avec FlowLayout <br>
+La classe FlowLayout propose 3 constructeurs : <br>
+  -  FlowLayout() : les composants sont centrés, laisse 5 pixels entre chaque composant <br>
+ - FlowLayout(int alignement) : l'alignement des composants est précisé <br>
+  -  FlowLayout(int alignement, int horz, int vert) : l'alignement des composants est précisé, ainsi que
+l'espace entre chaque composant, horizontalement et verticalement
+avec l'alignement parmi : FlowLayout.LEFT, FlowLayout.CENTER, FlowLayout.RIGHT, FlowLayout.LEADIN
+FlowLayout.TRAILING .</li>
+                          <li>Exemple avec BoxLayout <br>
+La classe GridLayout propose 3 constructeurs : <br>
+ - BoxLayout(Container target, int axe) : une simple colonne est créée
+avec la valeur de axe parmi les constantes : X_AXIS (placement horizontal), Y_AXIS (placement vertical),
+etc.</li>
+                          <li>Exemple avec GridLayout <br>
+Le gestionnaire GridLayout dénit une grille d'un certain nombre de lignes et de colonnes, et place un
+composant (conteneur ou contrôle graphique) par cellule ainsi dénie. Il propose 3 constructeurs : <br>
+ -  GridLayout() : une simple colonne est créée</li> <br>
+ - GridLayout(int numRows, int numColumns) : une grille comportant un certain nombre de rangées
+et de colonnes est dénie <br>
+ - GridLayout(int numRows, int numColumns, int hGap, int vGap) : une grille comportant un certain nombre de rangées et de colonnes est dénie, ainsi que l'espace entre chaque composant,
+horizontalement et verticalement
+                          <li>Exemples avec BorderLayout <br>
+Le gestionnaire BorderLayout dénit 5 zones et place 1 seul composant (conteneur ou contrôle graphique) par zone . <br>
+pour ajouter un objet : void add(Component compObj, Object region) <br>
+Pour avoir la possibilité d'ajouter 2 composants dans un même zone, il va falloir
+ - ajouter un conteneur dans la zone : un objet de la classe JPanel (c'est le conteneur le plus utilisé) <br>
+ - préciser le gestionnaire de positionnement pour ce conteneur : ici BorderLayout
+Pour dénir le gestionnaire de présentation BorderLayout(): <br>
+<code>setLayout ( new BorderLayout ()); // pas nécessaire si déjá dé fini</code> <br>
+Pour ajouter un composant dans l'un des zones d'un conteneur lié au gestionnaire BorderLayout : <br>
+<code>conteneur . add( objet contr ôle graphique , BorderLayout . NORTH );</code> <br>
+Comme dans le cas de l'association d'une fenêtre à un JPanel, il est nécessaire pour utiliser un gestionnaire de positionnement de : <br>
+1. créer un objet gestionnaire de positionnement ; <br>
+2. l'associer au JPanel par l'appel à la méthode setLayout de la classe JPanel ; <br>
+3. la méthode add de JPanel que nous utilisions pour ajouter des objets est surchargé et prend un
+paramètre supplémentaire indiquant le positionnement de l'objet en question. <br> <br>
+Par exemple, pour créer un BorderLayout et l'associer à notre JPanel et positionner le bouton en haut
+il est nécessaire de faire : <br>
+<code>
+  // cré ation d'un objet de type Bouton <br>
+JButton monBouton = new JButton (" Java ");<br>
+// maintenant on crée et on associe le JPanel á la fen ê tre<br>
+JPanel panel = new JPanel ();<br>
+maFenetre . setContentPane ( panel );<br>
+// cré ation du BorderLayout et association au Jpanel<br>
+BorderLayout monLayout = new BorderLayout ();<br>
+panel . setLayout ( monLayout );<br>
+// et on rajoute notre boutton<br>
+panel .add( monBouton , BorderLayout . NORTH );</code><br>
+en n'oubliant pas d'insérer l'importation suivante : import java.awt.BorderLayout;
+
+                          </li>
+                          <li></li>
+                          <li></li>
+                        </ul>
+              </dd>
+            </dl>
+        </li>
+
+        <li>
+            <dl class="">
+              <dt></dt>
+              <dd></dd>
+            </dl>
+        </li>
+
+        <li>
+            <dl class="">
+              <dt></dt>
+              <dd></dd>
+            </dl>
+        </li>  <li>
+              <dl class="">
+                <dt></dt>
+                <dd></dd>
+              </dl>
+          </li>
+
+
+      </ol>
+  </body>
+</html>

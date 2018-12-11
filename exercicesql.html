@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang=fr dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="cssexercicesql.css">
+    <link rel="stylesheet" href="w3.css">
+    <title>Exercices SQL</title>
+    <h1 class="w3-teal w3-center" id="exo">Exercices Oracle-SQL</h1>
+  </head>
+  <body class="w3-sand">
+    <ol id="exotitre">
+      <li>Les requetes simples</li>
+          <ol class="lesexo">
+            <li>Ecrivez une requête en SQL pour afficher le nom complet (prénom et nom) et le salaire
+des employés dont le salaire est inférieur à 6000 <br>
+<code>select last_name || first_name nom_complet, salary from employees where salary < 6000;</code>
+</li>
+            <li>Ecrivez une requête en SQL pour afficher le prénom et le nom, le numéro de
+département et le salaire des employés dont le salaire est supérieur à 8 000.
+<br><code>select first_name,last_name, department_id, salary from employees where salary < 8000;</code></li>
+            <li>Ecrivez une requête en SQL pour afficher le nom, le prénom et le numéro de
+département de tous les employés dont le nom est "McEwen"
+<br><code>select last_name, first_name, department_id from employees where last_name='McEwen';</code></li>
+            <li>Ecrivez une requête en SQL pour afficher toutes les informations sur le département
+Marketing.
+<br><code>select * from departments where department_name='Marketing';</code></li>
+            <li>Ecrivez une requête en SQL pour afficher le nom complet (prénom et nom), la date
+d'embauche, le salaire et le numéro de département des employés dont le prénom ne
+contient pas la lettre M, puis définissez le résultat par ordre croissant de numéro de
+département.
+<br><code>select first_name || last_name, hire_date, salary, department_id from employees where first_name not like'%M%' order by department_id;</code></li>
+            <li>Ecrivez une requête en SQL pour afficher toutes les informations des employés dont le
+salaire est compris entre 8 000 et 12 000 et dont la commission n’est pas nulle ou le
+numéro de département est différent des numéros 40, 120 et 70 et qui ont été
+embauchés avant le 5 juin. 1987. <br> <code>select * from employees where salary between 8000 and 12000 and commission_pct is not null or department_id not in (40,120,70) and hire_date < '05/06/1987';</code></li>
+            <li>Ecrivez une requête en SQL pour afficher le nom complet (prénom et nom) et le salaire
+de tous les employés qui ne gagnent aucune commission. <br> <code>select last_name || first_name nom_complet,salary from employees where commission_pct is null;</code></li>
+            <li>Ecrivez une requête en SQL pour afficher le nom complet (prénom et nom), le numéro
+de téléphone et l'adresse électronique, séparés par un trait d'union et le salaire, pour
+les employés dont le salaire est compris entre 9 000 et 17 000. Les en-têtes de colonne
+affectés à Full_Name , Contact_Details et Rémuity, respectivement. <br> <code>select last_name ||first_name Full_Name, phone_number || '_' || email contact_details, salary salary from employees where salary between 9000 and 17000;</code></li>
+            <li>Ecrivez une requête en SQL pour afficher le prénom, le nom de famille et le salaire des
+employés dont le prénom se termine par la lettre m. <br> <code>select first_name, last_name, salary from employees where first_name like'%m';</code></li>
+            <li>Ecrivez une requête en SQL pour afficher le nom complet (prénom et nom), ainsi que le
+salaire, pour tous les employés dont le salaire est compris entre 7000 et 15000, et
+définissez le résultat dans l'ordre croissant du nom complet. <br> <code>select last_name || first_name nom_complet, salary from employees where salary between 7000 and 15000 order by nom_complet  ;</code></li>
+            <li>Ecrivez une requête en SQL pour afficher le nom complet (prénom et nom), l'identifiant
+du travail et la date d'embauche des employés embauchés le 5 novembre 2007 et le 5
+juillet 2009. <br> <code>select last_name, first_name, job_id, hire_date from employees where hire_date in('05/11/2007','05/07/2009');</code></li>
+            <li>Ecrivez une requête en SQL pour afficher le nom complet (prénom et nom) et le
+numéro de département des employés travaillant dans les départements 70 ou 90. <br> <code>SELECT last_name, first_name, department_id from employees where department_id in (70,90);</code></li>
+            <li>Ecrivez une requête en SQL pour afficher le nom complet (prénom et nom), le salaire
+et le numéro du responsable pour les employés travaillant sous un responsable. <br> <code>select last_name, first_name, salary, manager_id from employees where manager_id is not null;</code></li>
+            <li>Ecrivez une requête en SQL pour afficher toutes les informations de la table Employés
+concernant les employés embauchés avant le 21 juin 2002. <br> <code>select * from employees where hire_date < '21/06/2002';</code></li>
+            <li>Ecrivez une requête en langage SQL pour afficher le nom et le prénom, l'adresse
+électronique, le salaire et l'ID du responsable, pour les employés dont le responsable
+est titulaire des identifiants 120, 103 ou 145. <br> <code>select last_name, first_name, email, salary, manager_id from employees where manager_id in(120,103,145);</code></li>
+            <li>Ecrivez une requête en SQL pour afficher toutes les informations concernant tous les
+employés portant les lettres D, S ou N en leur prénom, puis organisez le résultat en
+ordre décroissant de salaire. <br> <code>select * from employees where first_name like'%D%' or first_name like'%S%' or first_name like'%N%' order by salary desc;</code></li>
+            <li>Ecrivez une requête en SQL pour afficher le nom complet (prénom et nom), la date
+d'embauche, le pourcentage de commission, l'adresse e-mail et le téléphone séparés
+par '-', ainsi que le salaire des employés dont le salaire est supérieur à 11 000 ou au
+septième chiffre. dans leur numéro de téléphone est égal à 3 et faire le résultat défini
+dans un ordre décroissant par le prénom. <br> <code>select last_name ||' '|| first_name, hire_date, commission_pct*100/(select sum(commission_pct)  from employees) as commission,
+   email ||'-'|| phone_number , salary from employees where salary > 11000 or substr(phone_number,7,1)='3'  order by first_name desc;</code></li>
+            <li>Ecrivez une requête en SQL pour afficher le prénom et le nom, ainsi que le numéro de
+département des employés dont la lettre s est le 3ème caractère de leur prénom. <br> <code>select first_name, last_name, department_id from employees where substr(first_name,3,1)='s';</code></li>
+            <li>Écrivez une requête en SQL pour afficher l'ID, le prénom, l'ID de travail et le numéro de
+service de l'employé qui travaille sauf les départements 50, 30 et 80. <br> <code>select employee_id, first_name, job_id, department_id from employees where department_id not in(50,30,80);</code></li>
+            <li>Ecrivez une requête en SQL pour afficher l'ID, le prénom, l'ID de travail et le numéro de
+service de l'employé dont le numéro de service est égal à 30, 40 ou 90.  <br> <code>select employee_id, first_name, job_id, department_id from employees where department_id in(30,40,90);</code></li>
+            <li>Ecrivez une requête en SQL pour afficher le prénom, le nom de famille et la date
+d'adhésion des employés, qu'ils soient représentant commercial ou commercial.  <br> <code></code></li>
+            <li>Ecrivez une requête en SQL pour afficher l'ID d'employé et la date à laquelle il a
+terminé son travail précédent.  <br> <code></code></li>
+              <li>Ecrivez une requête en SQL pour afficher les détails des employés qui n’ont pas
+de pourcentage de commission ni de salaire compris entre 7 000 et 12 000 et qui
+travaillent dans ce département dont le nombre est 50.  <br> <code></code></li>
+                <li>Ecrivez une requête en SQL pour afficher tous les employés dont le prénom ou le nom
+commence par la lettre D.  <br> <code></code></li>
+                  <li>Ecrivez une requête en SQL pour afficher les employés qui ont rejoint le groupe après
+le 7 septembre 1987.</li>
+
+          </ol>
+      <li>Les groupements</li>
+            <ol class="lesexo">
+              <li>Ecrivez une requête en SQL pour afficher l'ID des employés ayant effectué deux tâches
+ou plus par le passé.</li>
+              <li>Ecrivez une requête en SQL pour afficher l'ID de travail, le nombre d'employés, la
+somme du salaire et la différence entre le salaire le plus élevé et le salaire le plus bas
+pour un travail.</li>
+              <li>Ecrivez une requête en SQL pour afficher l'ID de travail pour les travaux exécutés par
+deux personnes ou plus pendant plus de 300 jours.</li>
+              <li>Ecrivez une requête en SQL pour afficher l'ID du pays et le nombre de villes de ce
+pays.</li>
+              <li>Ecrivez une requête en SQL pour afficher l'ID du responsable et le nombre d'employés
+gérés par le responsable.</li>
+              <li>Ecrivez une requête en SQL pour afficher les détails des travaux dans l'ordre
+décroissant du titre du travail.</li>
+              <li>Ecrivez une requête en SQL pour afficher le salaire moyen des employés de
+chaque service qui reçoit un pourcentage de commission.</li>
+              <li>Ecrivez une requête en SQL pour afficher le salaire moyen des employés de
+chaque service qui reçoit un pourcentage de commission.</li>
+              <li>Ecrivez une requête en SQL pour afficher les départements dans lesquels un
+responsable gère au moins 4 employés.</li>
+              <li>Ecrivez une requête en SQL pour afficher les services dans lesquels travaillent plus de
+dix employés et qui ont reçu un pourcentage de commission.</li>
+              <li>Ecrivez une requête en SQL pour afficher le titre du travail, la différence entre les
+salaires minimum et maximum pour les travaux dont le salaire maximum est compris
+entre 12 000 et 18 000.</li>
+              <li>Écrivez une requête en SQL pour afficher les détails des emplois dont le salaire
+minimum est supérieur à 9 000.</li>
+            </ol>
+      <li>Les sous requètes</li>
+
+
+      <li>Les jointures</li>
+
+      <li>les opérateurs assemblistes</li>
+
+      <li>les exercices de la classe</li>
+    </ol>
+  </body>
+</html>

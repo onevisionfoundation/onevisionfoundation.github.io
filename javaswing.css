@@ -1,0 +1,18 @@
+h1{
+  margin-left: 2em;
+  color: blue;
+}
+ol li::first-line{
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+ul li::first-line{
+  color: red;
+  font-weight: bold;
+  font-size: 12px;
+}
+code{
+  background-color: gray;
+  color: white;
+}
