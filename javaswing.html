@@ -69,9 +69,9 @@ de positionnement ont une sémantique calquée sur celle qui lie un JPanel à un
 associer un gestionnaire de positionnement à un JPanel.<br>
 Nous n'avons heureusement pas à écrire un gestionnaire de positionnement (même si cela est possible)
 car la bibliothèque Java fournit déjà un certain nombre de gestionnaires de positionnement qui correspondent aux situations les plus courantes. Voir par exemple la documentation de Java à cette adresse
-http://docs.oracle.com/javase/tutorial/uiswing/layout/using.html.<br>
+ <a href="http://docs.oracle.com/javase/tutorial/uiswing/layout/using.html">http://docs.oracle.com/javase/tutorial/uiswing/layout/using.html</a>.<br>
 Sans gestionnaire (pas de layout manager, valeur 'null', déconseillé), le placement des composants est
-manuel (c'est ce qui a été utilisé dans l'exercice précédent) : <br>
+manuel : <br>
                       <ul>
                         <li>pas de redimensionnement automatique des composants lors d'un redimensionnement de la fenêtre</li>
                         <li>gestion de la taille manuelle</li>
@@ -82,26 +82,32 @@ manuel (c'est ce qui a été utilisé dans l'exercice précédent) : <br>
                     <h3> Les gestionnaires de positionnement</h3>
                       Les gestionnaires de positionnement automatisent le placement dynamique des composants dans un
                       conteneur selon des règles préétablies. Les gestionnaires courants sont les suivantes : <br>
-                        - FlowLayout : (par défaut pour JPanel) : les composants sont placés les uns après les autres, avec
-                      un passage à la ligne suivante quand une ligne est pleine <br>
-                       - BorderLayout : (par défaut pour JFrame) : dénit 5 zones, avec un composant par zone :
-                      1 zone haute (BorderLayout.NORTH) et 1 zone basse (BorderLayout.SOUTH) <br>
-                      - au milieu 3 zones : gauche (BorderLayout.WEST), centre (BorderLayout.CENTER, option par
-                      défaut) et droite (BorderLayout.EAST) <br>
-                       - BoxLayout : les composants sont placés les uns au dessous des autres, ou les uns après les autres <br>
-                        - GridLayout : les composants sont placés dans une grille <br>
-                       - CardLayout et GridBagLayout sont plus complexes à manipuler <br>
-                      Pour associer un gestionnaire de placement à un conteneur, on utilise la méthode setLayout(objet
-                      gestionnaire). <br>
+
+
+
+                      <ul id="leslayout">
+
+                        <li><mark>FlowLayout :</mark> (par défaut pour JPanel) : les composants sont placés les uns après les autres, avec
+                      un passage à la ligne suivante quand une ligne est pleine </li>
+                       <li><mark>BorderLayout : </mark>(par défaut pour JFrame) : définit 5 zones, avec un composant par zone :
+                      1 zone haute (BorderLayout.NORTH) et 1 zone basse (BorderLayout.SOUTH)
+                        au milieu 3 zones : gauche (BorderLayout.WEST), centre (BorderLayout.CENTER, option par
+                      défaut) et droite (BorderLayout.EAST) </li>
+                       <li><mark>BoxLayout :</mark>les composants sont placés les uns au dessous des autres, ou les uns après les autres </li>
+                        <li><mark>GridLayout : </mark>les composants sont placés dans une grille </li>
+                       <li><mark>CardLayout et GridBagLayout</mark> sont plus complexes à manipuler</li>
+                      </ul>
+
+                      Pour associer un gestionnaire de placement à un conteneur, on utilise la méthode <mark>setLayout(objet
+                      gestionnaire)</mark>. <br>
                       Par exemple: <br>
                       <code>JPanel pnl1 = new JPanel (); <br>
                         pnl1 . setLayout ( new BorderLayout ());</code> <br>
                         La conception d'une interface graphique va consister en l'utilisation la plus judicieuse de conteneurs
                         (comme les JPanel) associés aux gestionnaires de placement les plus adaptés.
 
-
                         <ul>
-                          <li>xemple avec FlowLayout <br>
+                          <li>Exemple avec FlowLayout <br>
 La classe FlowLayout propose 3 constructeurs : <br>
   -  FlowLayout() : les composants sont centrés, laisse 5 pixels entre chaque composant <br>
  - FlowLayout(int alignement) : l'alignement des composants est précisé <br>
@@ -116,8 +122,8 @@ avec la valeur de axe parmi les constantes : X_AXIS (placement horizontal), Y_AX
 etc.</li>
                           <li>Exemple avec GridLayout <br>
 Le gestionnaire GridLayout dénit une grille d'un certain nombre de lignes et de colonnes, et place un
-composant (conteneur ou contrôle graphique) par cellule ainsi dénie. Il propose 3 constructeurs : <br>
- -  GridLayout() : une simple colonne est créée</li> <br>
+composant (conteneur ou contrôle graphique) par cellule ainsi définie. Il propose 3 constructeurs : <br>
+ -  GridLayout() : une simple colonne est créée</li>
  - GridLayout(int numRows, int numColumns) : une grille comportant un certain nombre de rangées
 et de colonnes est dénie <br>
  - GridLayout(int numRows, int numColumns, int hGap, int vGap) : une grille comportant un certain nombre de rangées et de colonnes est dénie, ainsi que l'espace entre chaque composant,
@@ -128,7 +134,7 @@ pour ajouter un objet : void add(Component compObj, Object region) <br>
 Pour avoir la possibilité d'ajouter 2 composants dans un même zone, il va falloir
  - ajouter un conteneur dans la zone : un objet de la classe JPanel (c'est le conteneur le plus utilisé) <br>
  - préciser le gestionnaire de positionnement pour ce conteneur : ici BorderLayout
-Pour dénir le gestionnaire de présentation BorderLayout(): <br>
+Pour définir le gestionnaire de présentation BorderLayout(): <br>
 <code>setLayout ( new BorderLayout ()); // pas nécessaire si déjá dé fini</code> <br>
 Pour ajouter un composant dans l'un des zones d'un conteneur lié au gestionnaire BorderLayout : <br>
 <code>conteneur . add( objet contr ôle graphique , BorderLayout . NORTH );</code> <br>
