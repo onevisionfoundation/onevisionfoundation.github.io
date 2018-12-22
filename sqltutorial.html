@@ -56,21 +56,21 @@
 
             <div class="w3-container w3-sand" style="border-left: 10px solid #558dd1;">
                 <dl>
-                    <dt><h3>Les etapes a suivre...</h3></dt>
-                    <dd>Apres intallation d'oracle express 11g, il existe un conte utilisateur HR déja mis en place par la communauté oracle , ce conte permet aux apprenants de gagner du temps dans leurs apprentissages car on y trouve des tableaux déja rempli sur lesquels noux pouvons exécuter de requètes SQL. Mais par défaut, ce conte est bloquer, ce qui nous donne pas accès aux tableaux.<br />
-                        Dans cette partie, nous allons débloquer le conte HR et lui donner un mots de pass unique nous permettant d'y accedé. Il existe plusieurs methodes pour débloquer le conte HR, dans notre cas, nous allons le débloquer et changer le mot de pass en une seule ligne dans <strong>l'invité de commande SQL</strong>.<br />
+                    <dt><h3>Les etapes à suivre...</h3></dt>
+                    <dd>Après l'intallation d'oracle express 11g, il existe un compte utilisateur HR déja mis en place par la communauté oracle. Ce compte permet aux apprenants de gagner du temps dans leurs apprentissages car on y trouve des tableaux déja rempli sur lesquels nous pouvons exécuter de requètes SQL. Mais par défaut, ce compte est bloquer, ce qui nous donne pas accès aux tableaux.<br />
+                        Dans cette partie, nous allons débloquer le compte HR et lui donner un mot de passe unique nous permettant d'y accedé. Il existe plusieurs methodes pour débloquer le compte HR, dans notre cas, nous allons le débloquer et changer le mot de passe en une seule ligne dans <strong>l'invité de commande SQL</strong>.<br />
                         Executer les commandes suivantes:<br />
 
                         <ol class="olhr">
-                            <li>Connecter vous dabord a votre conte system:<br />
+                            <li>Connecter vous dabord à votre compte system:<br />
                                 <code>connect system/[mot_de_pass]</code><br />
                                 <i>[mot_de_pass] est le mot de pass fourni lors de l'instalation d'oracle 11g (selon votre version).</i>
 
                             </li>
-                            <li>Debloquer maintenant le conte HR<br />
+                            <li>Debloquer maintenant le compte HR<br />
                                 <em><code>alter user hr account unlock identified by [mot de pass]</code></em><br />
-                                <i>[mot_de_pass] est le mot de pass que vous allez utiliser pour vous connecter au conte HR (à ne pas oublié).</i><br />
-                                Vous pouvez vérifié en executant:  <ode>select * from employees</ode>
+                                <i>[mot_de_pass] est le mot de pass que vous allez utiliser pour vous connecter au compte HR (à ne pas oublié).</i><br />
+                                Vous pouvez vérifier en executant:  <ode>select * from employees</ode>
                             </li>
 
                         </ol>
@@ -79,7 +79,7 @@
             </div>
 
             <footer class="w3-container w3-blue">
-              <h5>Note: Pour vous exercer sur les tableaus du conte HR, vous aver a votre disposition une liste d'exercice pouvant vous aider dans la partie exercice du menu.</h5>
+              <h5>Note: Pour vous exercer sur les tableaux du compte HR, vous avez à votre disposition une liste d'exercice pouvant vous aider dans la partie exercice du menu.</h5>
             </footer>
 
         </div>
@@ -99,9 +99,9 @@
                 
                 
             <dl style="padding-left: 2px;">
-            <dt><h3>L'aspect le plus conu du langage SQL</h3></dt>
+            <dt><h3>L'aspect le plus connu du langage SQL</h3></dt>
             <dd>Cette partie traite de l’aspect le plus connu du langage SQL à savoir l’extraction des données
-                par requêtes (nom donné aux instructions SELECT). Une requête permet de rechercher des
+                par requêtes (nom données aux instructions SELECT). Une requête permet de rechercher des
                 données dans une ou plusieurs tables ou vues à partir de critères simples ou complexes. Les
                 instructions SELECT peuvent être exécutées dans l’interface SQL*Plus.<br /><br />
                 
@@ -210,7 +210,7 @@
                 <em>[ WHERE condition ]</em> ;<br><br>
                 ● condition : est composée de colonnes, d’expressions, de constantes liées deux à deux entre
                 des opérateurs :<br>
-                – de comparaison (>, =,&#60;, &#60; > ) ;<br>
+                – de comparaisons (>, =,&#60;, &#60; > ) ;<br>
                 – logiques (NOT, AND ou OR) ;<br>
                 – intégrés (BETWEEN, IN, LIKE, IS NULL)<br><br>
                 <code>
@@ -262,7 +262,7 @@
                 <strong>• <u>Une fonction multiligne (fonction d’agrégat)</u></strong> agit sur un ensemble de lignes pour ramener un résultat (voir la section « Regroupements »).<br>
                 
                 <ol>
-                    <li>Les fonction pour les caractères (Fonctions monoligne)<br>
+                    <li>Les fonction pour les caractères (Fonctions monolignes)<br>
                         La plupart des fonctions pour les caractères acceptent une chaîne de caractères en paramètre
                         de nature CHAR, VARCHAR2, NCHAR, NVARCHAR2, CLOB, ou NCLOB. Le tableau suivant
                         décrit les principales fonctions :
@@ -707,7 +707,7 @@ Le tableau suivant illustre cette classification sous la forme de quelques condi
                         Seules les colonnes de la table qui se trouve au niveau du premier SELECT peuvent être extraites.<br><br>
                         La sous-interrogation doit être placée entre parenthèses. Elle ne doit pas comporter de clause
 ORDER BY mais peut inclure GROUP BY et HAVING.
-Le résultat d’une sous-interrogation est utilisé par la requête de niveau supérieur. Une sousinterrogation est exécutée avant la requête de niveau supérieur.
+Le résultat d’une sous-interrogation est utilisé par la requête de niveau supérieur. Une sous-interrogation est exécutée avant la requête de niveau supérieur.
 Une sous-interrogation peut ramener une ou plusieurs lignes. Les opérateurs =, >, &#60;=,&#62;=
 permettent d’en extraire une, les opérateurs IN, ANY et ALL permettent d’en ramener
 plusieurs.
@@ -742,7 +742,7 @@ regroupements.
             </div>
 
             <footer class="w3-container w3-green">
-              <h5>Note: Attention! Dans la pratique, la présence de reponses apres execution d'un état ne veux pas forcement dire que le code est juste, donc prener du temps de verifier vos reponses. Pour vous exercer sur les tableaus du conte HR, vous aver a votre disposition une liste d'exercice pouvant vous aider dans la partie exercice du menu.</h5>
+              <h5>Note: Attention! Dans la pratique, la présence des réponses après l'execution d'un état ne veut pas forcement dire que le code est juste, donc prener du temps de verifier vos réponses. Pour vous exercer sur les tableaux du compte HR, vous avez à votre disposition une liste d'exercice pouvant vous aider dans la partie exercice du menu.</h5>
             </footer>
 
         </div>
