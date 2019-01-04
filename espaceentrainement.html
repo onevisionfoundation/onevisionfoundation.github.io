@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="oventrainement.css">
+    <title></title>
+    <h1>ESPACE ENTRAINEMENT</h1>
+    <h2 id="mat">TP Oracle SQL</h2>
+    <script type="text/javascript">
+      function changecolor(string){
+        document.getElementById('mat').innerHTML = string;
+      }
+    </script>
+  </head>
+  <body>
+      <div class="ov-container ov-column" id="menuentrai">
+        <ol class="ferst">
+          <li>Oracle SQL</li>
+          <ol class="second">
+            <li><a href="exoOracleParti1.html" onclick="changecolor('TP Oracle SQL')" target="iframe_a" id="op1">Partie 1 <i>Interogation de la table avec select</i> </a></li>
+            <li><a href="exoOracleParti2.html" onclick="changecolor('TP Oracle SQL')" target="iframe_a" id="op2">Partie 2 <i>Restriction et tri des données</i> </a></li>
+            <li><a href="exoOracleParti3.html" onclick="changecolor('TP Oracle SQL')" target="iframe_a" id="op3">Partie 3 <i>Utilisation des fonctions mono-lignes</i> </a></li>
+          </ol>
+          <li>Réseau</li>
+          <li>Java-script</li>
+          <li>Dynamic HTML</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JAVA</li>
+          <li>Système d'exploitation</li>
+          <li>Maintenance</li>
+          <li>Projet</li>
+          <li>Divers</li>
+        </ol>
+      </div>
+      <iframe src="exoOracleParti1.html" width="75%" height="1800px" name="iframe_a" id="iframe">
+      </iframe>
+
+    </body>
+</html>

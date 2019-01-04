@@ -1,0 +1,247 @@
+@media screen and (max-width: 700px) {
+  html{
+    background: blue;
+  }
+  .bodycontainer{
+    background-image: url(backgroundphone.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: -0.5em;
+    padding: 0.0em;
+  }
+    #menuentete {
+         flex-direction: column;
+         align-items: flex-start;
+    }
+    #leslabel {
+         flex-direction: column;
+         margin-top: 1em;
+         margin: 3em;
+         padding-bottom: 2em;
+         background-color: rgb(138,138,255);
+         border-radius: 5px;
+    }
+    #body3{
+         flex-direction: column;
+         padding-top: 0.0em;
+    }
+    #bodylast{
+      width: 19em;
+      margin-left: 0.0em;
+    }
+    #quote{
+      display: none;
+    }
+    #sousquote{
+      top: -1em;
+    }
+
+}
+html{
+  background-image: url(background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0.0em;
+}
+@keyframes moove {
+     from {transform: translateX(0);
+        }
+      to {transform: translateX(5);
+      }
+ }
+@keyframes zoomer {
+     from {transform: scale(0.9);
+        background-color: rgb(255,121,121);
+        }
+      to {transform: scale(1);
+  }
+ }
+ #logo{
+   animation-name: moove;
+  animation-duration: 5s;
+ }
+ #exercice{
+   animation-name: zoomer;
+   animation-duration: 4s;
+   animation-delay: 0.1s;
+   animation-iteration-count: infinite;
+ }
+.ov-container{
+  display: flex;
+}
+.ov-inline-container{
+  display: inline-flex;
+}
+.ov-row{
+  flex-direction: row;
+}
+.ov-column{
+  flex-direction: column;
+}
+.ov-center-orizontaly{
+  justify-content: center;
+}
+.ov-center-verticaly{
+  align-items: center;
+}
+.ov-space-between{
+  justify-content: space-between;
+}
+.ov-align-top{
+  align-items: flex-start;
+}
+.ov-margin-auto{
+  margin: auto;
+}
+.clearfix {
+    overflow: auto;
+}
+
+#entete{
+  width: 100%;
+  padding-right: 1em;
+  position: relative;
+  margin-top: -0.5em;
+  margin-right: -0.5em;
+  margin-left: -0.5em;
+  background: rgba(0,0,0,0.7);
+
+}
+#entete a{
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 1.1em;
+  font-size: 1.2em;
+  color: white;
+}
+#home{
+  background-color: red;
+  padding: 2px;
+}
+#entete a:hover{
+  color: yellow;
+  transform: scale(1.4);
+  transition-property: all;
+  transition-duration: 0.5s;
+  background-color: red;
+}
+.bodycontainer{
+  height: 36em;
+}
+.quote{
+  color: yellow;
+  text-shadow: 0px 4px 0px black;
+  font-weight: bold;
+  font-size: 3em;
+}
+.sousquote{
+  font-size: 1.6em;
+  color: yellow;
+  position: relative;
+  top: -3em;
+  text-shadow: 1px 2px 2px black;
+}
+.body_second_container{
+  background-color: rgb(245,245,245);
+  margin-left: -1em;
+  margin-right: -0.5em;
+}
+#leslabel{
+  padding-right: 3em;
+  padding-left: 3em;
+  position: relative;
+  top: -3.8em;
+}
+.label{
+  padding: -0.5em;
+  border-radius: 10px;
+  background-color: rgb(83,83,255);
+  width: 15em;
+  height: 7em;
+  box-shadow: 0px 5px 2px 0px rgba(0,0,0,0.5);
+  transition-property: all;
+  transition-duration: 0.6s;
+}
+.label:hover{
+  box-shadow: 1px 2px 1px 8px rgba(119,199,255,0.5);
+  background-color: rgb(60,60,255);
+}
+#leslabel a{
+  text-decoration: none;
+}
+.lebeltitre{
+  color: yellow;
+  font-weight: bold;
+  font-size: 1.7em;
+}
+.labdetail{
+  color: rgba(255,255,255,0.8);
+  margin-top: -1.5em;
+}
+.body3{
+  padding: 3em;
+}
+.leftaside{
+  border-radius: 1em;
+  padding: 0.2em;
+  margin-top: 0.5em;
+  width: 15em;
+  background: rgb(228,248,238);
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+.leftaside:hover{
+  background-color: orange;
+  box-shadow: 1px 2px 1px rgb(165,228,197);
+  transform: scale(1.1);
+}
+.asidtitre{
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.aside{
+  border-radius: 1em;
+  border: 2px solid white;
+  padding: 3em;
+  background: rgb(208,242,255);
+}
+.bodylast{
+  margin-left: 3em;
+  width: 45em;
+  padding-left: 2em;
+  padding-right: 2em;
+  background-color: rgb(238,251,244);
+  border: 2px solid white;
+}
+.seance{
+  border-bottom: 1px solid gray;
+}
+.seance ul li{
+  display: inline-block;
+  margin-right: 2em;
+  color: white;
+}
+#jour{
+  background-color: rgb(252,132,132);
+  padding: 0.7px;
+}
+
+
+footer{
+  background-color: rgba(0,0,0,0.8);
+  position: relative;
+  height: 8em;
+  margin-left: -1em;
+  margin-right: -0.5em;
+  margin-bottom: -1em;
+  margin-top: -1em;
+}
+
+footer a{
+  text-decoration: none;
+  color: white;
+  margin-right: 3em;
+}
+footer i{
+  margin-right: 0.3em;
+}
