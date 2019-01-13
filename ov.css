@@ -37,11 +37,14 @@
     }
 
 }
-html{
-  background-image: url(background.jpg);
+.bodycontainer{
+  background-image: url(backgroundimg.jpg);
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   padding: 0.0em;
+  margin-left: -0.5em;
+  margin-right: -0.5em;
 }
 @keyframes moove {
      from {transform: translateX(0);
