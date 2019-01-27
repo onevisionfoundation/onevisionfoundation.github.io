@@ -1,0 +1,137 @@
+.ov-container{
+  display: flex;
+}
+.ov-inline-container{
+  display: inline-flex;
+}
+.ov-row{
+  flex-direction: row;
+}
+.ov-column{
+  flex-direction: column;
+}
+.ov-center-orizontaly{
+  justify-content: center;
+}
+.ov-center-verticaly{
+  align-items: center;
+}
+.ov-space-between{
+  justify-content: space-between;
+}
+.ov-align-top{
+  align-items: flex-start;
+}
+.ov-margin-auto{
+  margin: auto;
+}
+.clearfix {
+    overflow: auto;
+}
+
+html{
+  background-color: rgba(233, 243, 243,1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dropdown{
+  position: absolute;
+  top: 1.2em;
+  right: 9em;
+}
+.dropcontain a{
+  display: block;
+  text-decoration: none;
+  font-size: 1.5em;
+  margin-top: 3px;
+  color: white;
+}
+
+.dropcontain a:hover{
+font-size: 1.3em;
+transition-property: all;
+transition-duration: 0.5s;
+}
+
+.dropcontain{
+  padding: 4px;
+  display: none;
+  position: absolute;
+  background-color: blue;
+  width: 12em;
+  overflow: auto;
+}
+.dropcontain a:hover{
+  color: yellow;
+}
+.dropdown:hover .dropcontain{
+  display: block;
+}
+body{
+  padding: 2em;
+}
+.top{
+  padding: -2.5em;
+  background-color: gray;
+  width: 12em;
+  height: 200px;
+  border-radius: 0% 0% 2% 2%;
+  overflow: auto;
+  box-shadow: 0px 0px 5px 5px blue;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+.top:hover{
+  box-shadow: 0px 0px 10px 10px blue;
+}
+.top a{
+  text-decoration: none;
+
+  color: rgb(243,243,243);
+}
+.top h1{
+  margin-top: -2%;
+  padding-left: 0.7em;
+  background-color: blue;
+  color: rgb(243,243,243);
+}
+.contenu{
+  padding-left: 0.5em;
+}
+
+.reseausous{
+  margin: -1em;
+  display: none;
+  position: absolute;
+  background-color: gray;
+  padding: 0.5em;
+  border-radius: 0.8em;
+  width: 20%;
+  height: 40%;
+  overflow-y: auto;
+
+}
+.titre p{
+  color: rgb(229,229,229);
+}
+.titre p:hover{
+  color: white;
+}
+.reseausous p{
+  color: white;
+}
+.titre:hover .reseausous{
+  display: block;
+
+}
