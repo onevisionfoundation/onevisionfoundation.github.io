@@ -37,14 +37,22 @@ h1{
   transition-delay: 0.5s;
 }
 #menuentrai:hover{
-  width: 20em;
+  /*width: 20em;*/
+}
+.second li:hover{
+  font-size: 1.2em;
+  background-color: rgb(10, 189, 213);
+}
+li{
+  transition-property: all;
+  transition-duration: 0.5s;
 }
 #menuentrai:hover h2{
   opacity: 0.1;
 }
-#menuentrai:hover i{
+/*#menuentrai:hover i{
   display: block;
-}
+}*/
 #menuentrai ul{
   list-style-type: none;
 }
@@ -59,6 +67,8 @@ h1{
 }
 #menuentrai .second li{
   margin-top: 0.2em;
+  width: 5em;
+  padding: 0.3em;
 }
 #iframe{
   position: relative;
