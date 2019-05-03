@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Partie 1</title>
+    <style media="screen">
+      h1{color: orange;}
+      h3{
+        color: rgb(255,100,100);
+      }
+       li{
+        color: white;
+        margin-top: 1em;
+      }
+      h4{
+        color: red;
+        margin-top: -1.8em;}
+    </style>
+    <h1>Base du PL/SQL</h1>
+    <h4>Module 1</h4>
+  </head>
+  <body>
+      <ol type="A">
+     <li> <mark>Curseurs</mark> </li>
+        <ol>
+          <li>Refaites les exercices de la partie "Utilisation PL/SQL" du module 2 en utilisant les curseurs.</li>
+          <li>En utilisant les données A.5, écrivez une fonction affichant toute la descendance d’une personne.</li>
+        <br>  <p style="color: yellow">Curseurs paramétrés <br> L’intérêt de ces exercices étant de vous familiariser avec les curseurs paramètres, vous ferez en sorte de ne pas
+          contourner leur usage. Nous utiliserons les données de A.6
+           </p>
+           <li>Ecrire une procédure qui affiche tous les clients, et pour chaque client, la liste des comptes.</li>
+           <li>Ecrire une procédure qui affiche tous les clients, et pour chaque client, la liste des comptes, et pour chacun de ces
+              comptes, l’historique des opérations.
+              </li>
+        </ol>
+        <li> <mark>Triggers</mark> </li>
+        <p style="color: yellow">Implémentez les contraintes suivantes dans les données de les données de A.8. Vous ferez des sous-programmes
+        tenant sur une page, et ne contenant pas plus de trois niveaux d’imbrication. Vous répertorierez les numéros d’erreurs que vous affecterez à chaque levée d’exception.
+        </p>
+        <ol>
+          <li>Il ne doit pas être possible de modifier la note min dans la table prérequis.</li>
+          <li>Dans un module, il ne doit pas y avoir plus de effecMax élèves inscrits.</li>
+          <li>On ne peut créer un examen pour un module que s’il y a des ´élèves inscrits dans ce module.</li>
+          <li>Un élève ne peut passer un examen que si sa date d’inscription est antérieure à la date de l’examen.</li>
+          <li>Il ne doit pas y avoir de circuit dans la table prérequis (il existe une façon de la vérifier en PL/SQL, mais
+          comme vous ne la connaissez pas, faites un parcours en profondeur du graphe des prérequis)
+          </li>
+          <li>Un élève s’inscrivant `a un module doit avoir eu au moins la note min `a tous les modules prérequis.</li>
+          <li>Ajouter dans étudiant un champ moyenne, celui-ci contiendra la moyenne de chaque étudiant s’il a passé les
+          examens de tous les modules dans lesquels il est inscrit.
+          </li>
+          <li>Revenez sur la première contrainte : il ne doit être possible de modifier une note min dans la table prérequis
+             que s’il n’existe pas d’élève dont une inscription serait invalidée.</li>
+             <li>. Il ne doit être possible de modifier effecMax que si des étudiants ne se retrouvent pas avec une inscription
+              invalidée. Libre à vous par la suite de trouver d’autres contraintes et de les implémenter.
+              </li>
+        </ol>
+        <li> <mark>Packages</mark> </li>
+          <ol>
+            <li>Lancez deux sessions simultanément sur le même serveur et invoquez les sous-programmes du package compteur depuis chacune des sessions.
+               Que remarquez-vous ?</li>
+            <li>Implémenter le corps du package suivant (utilisez les données de A.5). <br>
+              <img src="orapackage.png" alt="">
+
+
+
+
+
+
+            </li>
+          </ol>
+          <li> <mark>Révisions</mark> </li>
+          <p style="color: yellow">Implémentez les contraintes suivantes dans les données de A.9.</p>
+          <ol>
+            <li>Les parents d’une même personne sont des personnes différentes.</li>
+            <li>L’arbre généalogique ne contient pas de circuit.</li>
+            <li>Les dates de divorce sont ultérieures aux dates de mariage.</li>
+            <li>Une même personne ne peut pas être mariée a plusieurs personnes simultanément.</li>
+            <li>Personne ne peut être père d’une personne et mèrre d’une autre.</li>
+            <li>Un mari ne peut pas être mère et une femme ne peut pas être père.</li>
+            <li>Deux personnes ayant du sang en commun ne peuvent se marier.</li>
+          </ol>
+
+      </ol>
+
+  </body>
+</html>

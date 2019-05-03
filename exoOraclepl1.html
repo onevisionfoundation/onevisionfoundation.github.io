@@ -35,26 +35,27 @@
              à l’écran le nombre de lignes affectées. </li>
           <li>Tester le bloc. Que se passe-t-il si on saisit un numéro de département qui n’existe pas? <br>
           Si on saisit un numéro de département qui a des employés? <br>
-         Tester le bloc avec le département Santé <br>
-          Vérifier que le département n’existe plus </li>
+         Tester le bloc avec le département Santé. <br> <br>
+          Vérifier que le département n’existe plus </li> <br>
         </ol>
 
-        <li><mark>Créer un bloc PL/SQL permettant de mettre à jour le pourcentage de commission d’un employé en fonction du total de ses ventes </mark> </li>
+        <li><mark>Créer un bloc PL/SQL permettant de mettre à jour le pourcentage de commission d’un employé en fonction du nombre de changement de Job </mark> </li>
         <ol>
           <li>Créer un paramètre qui reçoit un numéro d’employé <br>
 
       Trouver la nombre totale de changement de JOB de cet employé <br>
       Mettre à jour le pourcentage de commission de l’employé : <br>
- - si la nombre est inférieure à 2 passer la commission à 10 <br>
- - si la nombre est comprise entre 2 et 5 inclus passer la commission à 15 <br>
- - si la nombre excède 5 passer la commission à 20 <br>
- - si cet employé n'a jamais éffectué de JOB, mettre la commission à 0 <br>
+ - si le nombre est inférieure à 2 passer la commission à 0.10 <br>
+ - si le nombre est compris entre 2 et 5 inclus passer la commission à 0.15 <br>
+ - si le nombre excède 5 passer la commission à 0.20 <br>
+ - si cet employé n'a jamais éffectué de JOB, mettre la commission à 0.0 <br>
       Valider la modification (commit)
             </li>
           <li>Tester le bloc et visualiser les résultats (on teste avec les employés 101,102,176,110)</li>
         </ol>
 
-        <li><mark>Créer un bloc PL/SQL qui boucle pour chaque Département  afin de modifier  le code de solvabilité de tous les employés. Ne pas valider (pas de commit).</mark><br> <br>
+        <li><mark>Créer un bloc PL/SQL qui boucle pour chaque Département  afin de modifier  le code de solvabilité de tous les employés. Ne pas valider (pas de commit).</mark><br> 
+          (Pour cet exercice, ajouter la colonne SOLVABILITE a la table employees) <br> <br>
           Si  le numéro de Département est pair mettre  la solvabilité à EXCELLENTE, sinon mettre à BONNE pour les numéros de Département impairs. <br> <br>
       Une fois les lignes modifiées, trouvez combien de lignes ont été mises à jour. <br> <br>
      Afficher les résultats suivants en fonction du nombre de lignes modifiées : <br>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Partie 1</title>
+    <style media="screen">
+      h1{color: orange;}
+      h3{
+        color: rgb(255,100,100);
+      }
+       li{
+        color: white;
+        margin-top: 1em;
+      }
+      h4{
+        color: red;
+        margin-top: -1.8em;}
+    </style>
+    <h1>Base du PL/SQL</h1>
+    <h4>Module 1</h4>
+  </head>
+  <body>
+      <ol type="A">
+        <li> <mark> Introduction au PL/SQL </mark></li>
+        <ol type="a">
+          <li>Ecrivez un programme affectant les valeurs 1 et 2 à deux variables a et b, puis permutant les valeurs de ces deux
+            variables.</li>
+          <li>Ecrivez un programme plaçant la valeur 10 dans une variable a, puis affichant la factorielle de a. </li>
+          <li> Ecrivez un programme plaçant les valeurs 48 et 84 dans deux variables a et b puis affichant le pgcd de a et b.</li>
+        </ol>
+
+        <li><mark>Tableaux et Structures</mark></li>
+        <ol>
+          <li> Créez un type tableau pouvant contenir des entiers. <br>
+              * Créez une variable de ce type <br>
+              * Placez dans ce tableau la liste des 20 premiers carres parfaits : 1; 4; 9; 16; 25;..... <br>
+              * Inversez l’ordre des éléments du tableau <br>
+              * Affichez le tableau. <br>
+              </li>
+          <li>Triez le tableau précédent avec la méthode du tri à bulle.</li>
+          <li>Recherchez, par dichotomie, si l’élément 225 se trouve dans le tableau.</li>
+        </ol>
+
+        <li><mark>Utilisation PL/SQL </mark> </li>
+        <p style="color: yellow">(Nous travaillerons sur les données A.6 et A.5.
+          Vous n’oublierez pas de placer des commit en des lieux bien choisis.
+          )</p>
+        <ol>
+          <li>Vous remarquerez que les valeurs des numpers de la table PERSONNE forment une s´séquence de nombres de 1 à 21. <br>
+            Utilisez une boucle dans laquelle vous placerez une requête pour recopier les couples nom/prénom
+            de la table personne dans la table CLIENT.
+            </li>
+          <li>Ecrivez un script récupérant le client de clé primaire la plus élevée, et injectant ce client dans la table PERSONNEL.</li>
+          <li>Ouvrez un compte courant pour chaque personne, effectuez un d´dépôt en espèce égal à numpers ∗ 100 euros.</li>
+          <li>Ouvrez un livret pour chaque personne ayant un numpers pair, faites un virement de leur compte courant vers ce
+          livret de sorte qu’il ne reste plus que 500 sur leur compte.
+          </li>
+        </ol>
+
+        <li><mark>Exceptions</mark></li>
+        <p style="color: yellow">Nous utiliserons les données de A.7 et A.5
+Vous êtes invités à modifier le code de la séance précédente. Chaque fois qu’un SELECT ... INTO ... sera
+effectué, vous rattraperez les exceptions NO DATA FOUND et TOO MANY ROWS. A chaque insertion, vous
+rattraperez l’exception DUP VAL ON INDEX. </p>
+        <ol>
+          <li>Faites de sorte que les scripts important les données des tables CLIENT ne puissent être exécutés qu’une seule fois.</li>
+          <li>Les scripts remplissant la table Opération ne fonctionneront pas aujourd’hui... Même s’il fonctionnaient la dernière fois. Trouvez les codes d’erreurs
+             des exceptions levées par ces scripts, rattrapez-les de la façon la plus appropriée qui soit.</li>
+         </ol>
+
+     <li> <mark>Sous-programmes</mark> </li>
+     <ol>
+       <li>Ecrire une fonction récursive retournant b<sup>n</sup>, avec n entier positif ou nul. </li>
+       <p style="color: yellow">Pour les questions suivantes, utilisez les données de A.5.</p>
+       <li>Ecrire une fonction demi-frères prenant deux numéros de personnes en paramètre et retournant
+         vrai si et seulement si ces deux personnes ont un parent en commun.
+       </li>
+       <li>Ecrire une fonction cousins germains prenant deux numéros de personnes en paramètre et retournant vrai si et
+        seulement si ces deux individus sont cousins germains.
+        </li>
+        <li>Ecrire une procédure récursive affichant le nom de la personne dont le numéro est passé en paramètre et se rappelant
+          récursivement sur le père de cette personne. Faites de sorte à ne pas utiliser d’exceptions.</li>
+
+          <li>Ecrire une procédure récursive affichant les noms des ascendants de sexe masculin de la personne dont le numéro est passé en paramètre.</li>
+          <li>Ecrire une fonction récursive prenant deux numéros de personne A et B et retournant vrai si A est un ascendant de B.</li>
+          <li>Ecrire une fonction prenant en paramètre deux numéros de personne A et B et retournant, si l’un est un ascendant
+          de l’autre, le nombre de générations les s´éparant, -1 si l’un n’est pas un ascendant de l’autre.
+          </li>
+     </ol>
+
+      </ol>
+
+  </body>
+</html>
