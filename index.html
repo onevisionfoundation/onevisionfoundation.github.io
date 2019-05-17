@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="ov.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
     <div class="ov-container ov-row ov-center-orizontaly ov-space-between" id="entete">
       <img src="logo.png" alt="" id="logo">
 
@@ -22,21 +21,25 @@
   </head>
   <body>
       <div class="ov-container ov-center-orizontaly ov-center-verticaly ov-column bodycontainer">
-<div class="">
-
-
-        <p class="quote" id="quote">Nous voulons une bonne éducation pour un monde meilleur</p>
-</div>
+        <div class="">
+          <p class="quote" id="quote">Nous voulons une bonne éducation pour un monde meilleur</p>
+        </div>
         <p class="sousquote" id="sousquote">Il n'est jamais trop tard d'apprendre</p>
       </div>
 
 
+      <div class="w3-modal" id="log">
+        <div class="w3-modal-content" style="width: 18em; height: 12em">
+          <div class="w3-container ov-container ov-column ov-center-verticaly ov-center-orizontaly">
+            <!--  <span onclick="document.getElementById('log').style.display='none'" class="w3-closebtn xclose" style="position: absolute;margin-top: -4.1em; color: white">&times;</span>-->
+              <h1 style="margin: 0px">For O.V TEAM</h1>
+                 <input type="text" name="" class="inplog" id="username" placeholder="User name" style=""> <br>
+                 <input type="password" name="" class="inplog" id="pass" placeholder="Password"> <br>
+                 <button onclick="verif()" class="butlog">Login</button>
 
-
-
-
-
-
+          </div>
+        </div>
+      </div>
       <div class="ov-container ov-center-orizontaly ov-column body_second_container">
         <div class="ov-container ov-row ov-center-verticaly ov-center-orizontaly ov-space-between" id="leslabel">
             <a href="cours.html">
@@ -81,7 +84,7 @@
             <a href="espaceentrainement.html" style="text-decoration: none;color: black;">
             <div class="leftaside" id="exercice">
               <p class="asidtitre">Espace entrainement</p>
-              <p class="asddetail">Qui somme nous ? Découvrez l'objectif, le but de One Vision</p>
+              <p class="asddetail">Découvrez tous les exercices de One vision</p>
             </div>
             </a>
           </div>
@@ -133,4 +136,5 @@
     <i class="fa fa-phone fa-2x" style="color: white"></i>
     <a href="#">telephone</a>
   </footer>
+  <script type="text/javascript" src="ov.js"> </script>
 </html>
